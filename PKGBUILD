@@ -18,7 +18,7 @@ sha1sums=('SKIP')
 
 pkgver() {
   cd ${_pkgname}
-  git describe --tags | sed 's/^v//; s/-/.r/; s/-/./g'
+  git describe --long --tags | sed 's/^v//; s/-/.r/; s/-/./g'
 }
 
 prepare() {
